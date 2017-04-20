@@ -22,11 +22,11 @@ public class CallMap extends AppCompatActivity {
         String Ing = Longtitude.getText().toString().trim();
         String mlabel = label.getText().toString().trim();
 
-        Uri location = Uri.parse("http://maps.google.com.map?q=loc:13.759774,100.541484");
+        Uri location = Uri.parse("http://maps.google.com.map?q=loc:" + Iat +"," + Ing +"(" + mlabel +")");
 
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-        mapIntent.setPackage("com.google.android.apps.map");
-
+        //mapIntent.setPackage("com.google.android.apps.map");
+        startActivity(mapIntent);
     }// Main Method
 
     public void callMap(View view) {
